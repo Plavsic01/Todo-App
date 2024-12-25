@@ -1,0 +1,13 @@
+.sort-filter-container {
+  /* background-color: rgba(0, 255, 255, 0.34); */
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  div {
+    max-width: 100%;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,31 @@
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.item-container > h2 {
+  margin: 10px;
+}
+
+.btn-action {
+  margin-top: 5px;
+}
+
+.task-completed {
+  text-decoration: line-through;
+}
+
+.btn-action > button {
+  background: none;
+  border: none;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.btn-action > button:last-child {
+  margin-right: 40px;
+}
