@@ -2,23 +2,23 @@ version: "3.8"
 
 services:
   mongodb:
-    image: mongo:latest # Koristimo zvaničnu MongoDB sliku
+    image: mongo:latest
     container_name: mongodb
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin # Definišite korisničko ime za root korisnika
-      - MONGO_INITDB_ROOT_PASSWORD=secret # Definišite lozinku za root korisnika
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=secret 
     ports:
-      - "27017:27017" # Mapiramo portove kako bismo mogli pristupiti bazi sa hosta
+      - "27017:27017" 
     volumes:
-      - mongodb_data:/data/db # Upisujemo podatke na disk kako bi podaci preživeli restart kontejnera
+      - mongodb_data:/data/db 
     networks:
       - mongodb-network
 
-  # Dodajte i druge servise ako je potrebno (npr. backend aplikacija)
+ 
 
 networks:
   mongodb-network:
-    driver: bridge # Korišćenje bridž mreže za povezivanje servisa
+    driver: bridge 
 
 volumes:
-  mongodb_data: # Definišemo volumen za MongoDB podatke
+  mongodb_data: 
